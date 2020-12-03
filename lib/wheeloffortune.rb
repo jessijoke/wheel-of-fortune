@@ -1,6 +1,7 @@
 require "wheeloffortune/version"
+require_relative '../config/environment.rb'
 
-module Wheeloffortune
+module WheeloffortuneMod
   class Error < StandardError; end
   # Your code goes here...
 end
