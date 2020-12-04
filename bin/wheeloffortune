@@ -1,6 +1,6 @@
 require "bundler/setup"
 require_relative '../lib/cli.rb'
 
-game = Wheeloffortune.new
+game = Game.new
 
 game.play

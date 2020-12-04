@@ -7,3 +7,8 @@ gem "rake", "~> 12.0"
 gem "rspec", "~> 3.0"
 gem 'require_all'
 gem 'pry'
+gem 'catpix'
+gem 'rmagick'
+gem 'tty'
+gem 'tty-prompt'
+gem 'tty-table'
