@@ -9,7 +9,6 @@ class QuoteAPI
     def initialize(url="https://quote-garden.herokuapp.com/api/v2/genres")
         @URL = url 
         #@url = "https://quote-garden.herokuapp.com/api/v2/genres/" + url + "?page=1&limit=10"
-        #@URL = "https://api.quotable.io/random"
         get_quotes
     end
 
