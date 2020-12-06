@@ -1,7 +1,3 @@
-require 'net/http'
-require 'open-uri'
-require 'json'
-require 'pry'
 require_relative '../config/environment.rb'
 
 

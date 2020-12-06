@@ -1,6 +1,5 @@
 require_relative '../config/environment.rb'
-require 'pry'
-require "tty-prompt"
+
 
 class Newpuzzle
     attr_accessor :category_chosen

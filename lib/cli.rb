@@ -1,15 +1,15 @@
 require_relative '../config/environment.rb'
-require 'pry'
-require "tty-prompt"
 
 class Game
-    attr_accessor :banners, :newpuzzle, :quote, :displaypuzzle, :alphabet, :name
+    attr_accessor :banners, :newpuzzle, :quote, :displaypuzzle, :alphabet, :score, :wheel, :name
 
     def initialize
         @banners = Banners.new
         @newpuzzle = Newpuzzle.new
         @displaypuzzle = Display_Puzzle.new
         @alphabet = "[abcdefghijklmnopqrstuvwxyz]"
+        @score = 0
+        @wheel = [800, 500, 650, 500, 900, "Bankrupt", 5000, 500, 900, 700, 600, 800, 500, 700, 500, 600, 550, 500, 900, "Bankrupt", 650, 900, 700, 2500]
     end
 
     def play
@@ -29,7 +29,6 @@ class Game
     end
 
     def menu
-        puts "Choose an option:"
         @banners.menu
     end
 

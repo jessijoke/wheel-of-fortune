@@ -1,5 +1,4 @@
 require_relative '../config/environment.rb'
-require 'catpix'
 
 
 class Banners
@@ -31,7 +30,8 @@ class Banners
         end
 
         def menu
-            puts"+-------------------------+------------------------+----------------------------+
+            puts"Choose an option:
++-------------------------+------------------------+----------------------------+
 |   Spin the Wheel (s)    |    Buy a Vowel? (v)    |    Solve the Puzzle? (sv)  |
 +-------------------------+------------------------+----------------------------+
             "
