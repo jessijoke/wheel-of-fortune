@@ -8,7 +8,7 @@ class Newpuzzle
         genres = genre.parse_json
         length = genres["genres"].count - 1
         prompt = TTY::Prompt.new
-        @category_chosen = prompt.ask("Which category would you like to play?", default: genres["genres"][0..length])
+        @category_chosen = prompt.ask("Which category would you like to play?", default: genres["genres"][0..length]).downcase
     end
 
     def select_puzzle

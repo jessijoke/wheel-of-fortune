@@ -36,4 +36,21 @@ class Banners
 +-------------------------+------------------------+----------------------------+
             "
         end
+
+        def display_top
+            blank_link
+            game_board_border
+            blank_link
+        end
+
+        def display_bottom
+            blank_link
+            game_board_border
+        end
+
+        def start
+            title
+            blank_link
+            welcome
+        end
 end

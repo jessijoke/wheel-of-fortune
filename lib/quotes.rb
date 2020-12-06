@@ -1,6 +1,5 @@
 require_relative '../config/environment.rb'
 
-
 class QuoteAPI
     def initialize(url="https://quote-garden.herokuapp.com/api/v2/genres")
         @URL = url 
