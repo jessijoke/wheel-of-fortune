@@ -37,6 +37,13 @@ class Banners
             "
         end
 
+        def score_board(name, score)
+            puts"
++-------------------------+
+#{name}: $#{score}               
++-------------------------+"
+        end
+
         def display_top
             blank_link
             game_board_border

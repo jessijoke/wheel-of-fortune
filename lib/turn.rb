@@ -3,16 +3,21 @@ require_relative '../config/environment.rb'
 class Turn
     attr_accessor :spinwheel
 
-    def initialize
-        @spinwheel = Spinthewheel.new
+    include Pickaletter
+
+    def spin_the_wheel(letters, quote, consonant)
+        pick_a_letter(letters, consonant)
     end
 
-    def spin_the_wheel(letters, quote)
-        #@spinwheel.wheel
-        @spinwheel.pick_a_letter(letters)
+    def buy_a_vowel(letters, vowel)
+        pick_a_letter(letters, vowel)
     end
 
-    def buy_a_vowel
-        
+    def solve_puzzle(input, answer)
+        if input.downcase == answer.downcase
+            true
+        else
+            false
+        end
     end
 end
