@@ -1,8 +1,6 @@
 # Wheeloffortune
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/wheeloffortune`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to Wheel of Fortune! This is a single player command line version of the game show we all know and love, after installation type `ruby bin/wheeloffortune` to run.
 
 ## Installation
 
@@ -22,7 +20,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Wheel of Fortune is a command line game that utilizes the Quote-Garden API to pull puzzles. When you start the application, enter your name, then select one of Quote Garden's categories. The application will then randomly select one of the quote's from that category and generate a puzzle. You can Spin the Wheel, Buy a Vowel, or Solve the Puzzle. 
+
+Spinning the wheel will generate a value your guess is worth. You will win the value * the number of times that letter is in the puzzle. (So if your spin value is 200, and the letter was in the puzzle 5 times, you win 1000)
+
+Buying a vowel costs 5000. This is not multipled by the times the letter is in the puzzle.
+
+To solve the puzzle you must type the puzzle (punctuation included) letter for letter. There is no penalty for guessing incorrectly.
+
+If you get all the letters on the board through spinning the wheel and buying vowels, the game will end.
+
+When the game ends you it will determine whether you won or lost based on whether your score is negative or positive, and then give you the option to play again or quit.
 
 ## Development
 
