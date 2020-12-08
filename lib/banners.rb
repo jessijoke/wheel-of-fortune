@@ -1,7 +1,7 @@
 require_relative '../config/environment.rb'
 
 
-class Banners
+module Banners
 
         def title
             Catpix::print_image "../wheeloffortune/images/banner.jpg",
@@ -29,7 +29,7 @@ class Banners
             "
         end
 
-        def menu
+        def menu_banner
             puts"Choose an option:
 +-------------------------+------------------------+----------------------------+
 |   Spin the Wheel (s)    |    Buy a Vowel? (v)    |    Solve the Puzzle? (sv)  |
@@ -47,7 +47,6 @@ class Banners
         def display_top
             blank_link
             game_board_border
-            blank_link
         end
 
         def display_bottom
