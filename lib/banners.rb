@@ -14,7 +14,7 @@ module Banners
         end
 
         def game_board_border
-        puts "<o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o>"
+        puts "<o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o>".colorize(:red)
         end
 
         def blank_link
@@ -30,11 +30,12 @@ module Banners
         end
 
         def menu_banner
-            puts"Choose an option:
+            puts"
+            Choose an option:
 +-------------------------+------------------------+----------------------------+
 |   Spin the Wheel (s)    |    Buy a Vowel? (v)    |    Solve the Puzzle? (sv)  |
 +-------------------------+------------------------+----------------------------+
-            "
+            ".colorize(:magenta)
         end
 
         def score_board(name, score)
@@ -58,5 +59,25 @@ module Banners
             title
             blank_link
             welcome
+        end
+
+        def win_image
+            Catpix::print_image "../wheeloffortune/images/win.jpg",
+                :limit_x => 1.0,
+                :limit_y => 0,
+                :center_x => true,
+                :center_y => true,
+                :bg => "black",
+                :bg_fill => true
+        end
+
+        def lose_image
+            Catpix::print_image "../wheeloffortune/images/lose.png",
+                :limit_x => 1.0,
+                :limit_y => 0,
+                :center_x => true,
+                :center_y => true,
+                :bg => "black",
+                :bg_fill => true
         end
 end

@@ -131,8 +131,10 @@ class Game
 
     def end_game
         if @@score > 0
+            win_image
             puts "Congratulations #{@name} You Won! Your final score is $#{@@score}"
         else
+            lose_image
             puts "Well #{@name}, you solved the puzzle but I wouldn't exactly call this a win. Your final score is -$#{@@score}"
         end
         prompt = TTY::Prompt.new
