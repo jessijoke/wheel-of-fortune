@@ -9,3 +9,4 @@ require 'json'
 require 'pry'
 require 'catpix'
 require "tty-prompt"
+require 'colorize'
