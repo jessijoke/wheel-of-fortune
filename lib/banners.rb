@@ -4,7 +4,7 @@ require_relative '../config/environment.rb'
 module Banners
 
         def title
-            Catpix::print_image "../wheeloffortune/images/banner.jpg",
+            Catpix::print_image "../images/banner.jpg",
                 :limit_x => 1.0,
                 :limit_y => 0,
                 :center_x => true,
@@ -62,7 +62,7 @@ module Banners
         end
 
         def win_image
-            Catpix::print_image "../wheeloffortune/images/win.jpg",
+            Catpix::print_image "../images/win.jpg",
                 :limit_x => 1.0,
                 :limit_y => 0,
                 :center_x => true,
@@ -72,7 +72,7 @@ module Banners
         end
 
         def lose_image
-            Catpix::print_image "../wheeloffortune/images/lose.png",
+            Catpix::print_image "../images/lose.png",
                 :limit_x => 1.0,
                 :limit_y => 0,
                 :center_x => true,

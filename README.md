@@ -13,6 +13,10 @@ gem 'wheeloffortune'
 Imagemagick is required to run this CLI app
 `brew install imagemagick`
 
+To correct a dependency glitch in the Catpix & Rmagick gems, you'll also need to run these commands to relink imagemagick6
+`brew unlink imagemagick`
+`brew install imagemagick@6 && brew link imagemagick@6 --force`
+
 And then execute:
 
     $ bundle install
