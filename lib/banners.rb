@@ -5,7 +5,7 @@ module Banners
 
         def title
             begin
-                Catpix::print_image "../images/banner.jpg",
+                Catpix::print_image "../wheel-of-fortune/images/banner.jpg",
                     :limit_x => 1.0,
                     :limit_y => 0,
                     :center_x => true,
@@ -73,7 +73,7 @@ module Banners
 
         def win_image
             begin
-                Catpix::print_image "../images/win.jpg",
+                Catpix::print_image "../wheel-of-fortune/images/win.jpg",
                     :limit_x => 1.0,
                     :limit_y => 0,
                     :center_x => true,
@@ -93,7 +93,7 @@ module Banners
 
         def lose_image
             begin
-                Catpix::print_image "../images/lose.png",
+                Catpix::print_image "../wheel-of-fortune/images/lose.png",
                     :limit_x => 1.0,
                     :limit_y => 0,
                     :center_x => true,
