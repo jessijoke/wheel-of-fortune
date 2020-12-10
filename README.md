@@ -1,31 +1,6 @@
 # Wheeloffortune
 
-=================================================================
-
-
-          ██╗    ██╗██╗  ██╗███████╗███████╗██╗
-          ██║    ██║██║  ██║██╔════╝██╔════╝██║
-          ██║ █╗ ██║███████║█████╗  █████╗  ██║
-          ██║███╗██║██╔══██║██╔══╝  ██╔══╝  ██║
-          ╚███╔███╔╝██║  ██║███████╗███████╗███████╗
-           ╚══╝╚══╝ ╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
-
-                       ██████╗ ███████╗
-                      ██╔═══██╗██╔════╝
-                      ██║   ██║█████╗
-                      ██║   ██║██╔══╝
-                      ╚██████╔╝██║
-                       ╚═════╝ ╚═╝
-
-  ███████╗ ██████╗ ██████╗ ████████╗██╗   ██╗███╗   ██╗███████╗
-  ██╔════╝██╔═══██╗██╔══██╗╚══██╔══╝██║   ██║████╗  ██║██╔════╝
-  █████╗  ██║   ██║██████╔╝   ██║   ██║   ██║██╔██╗ ██║█████╗
-  ██╔══╝  ██║   ██║██╔══██╗   ██║   ██║   ██║██║╚██╗██║██╔══╝
-  ██║     ╚██████╔╝██║  ██║   ██║   ╚██████╔╝██║ ╚████║███████╗
-  ╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═══╝╚══════╝
-
-
-=================================================================
+![Wheel of Fortune Logo](./images/banner.jpg)
 
 Welcome to Wheel of Fortune! This is a single player command line version of the game show we all know and love, after installation type `ruby bin/wheeloffortune` to run.
 
@@ -38,11 +13,15 @@ gem 'wheeloffortune'
 ```
 
 Imagemagick is required to run this CLI app
-`brew install imagemagick`
+```
+brew install imagemagick
+```
 
 To correct a dependency glitch in the Catpix & Rmagick gems, you'll also need to run these commands to relink imagemagick6
-`brew unlink imagemagick`
-`brew install imagemagick@6 && brew link imagemagick@6 --force`
+```
+brew unlink imagemagick
+brew install imagemagick@6 && brew link imagemagick@6 --force
+```
 
 And then execute:
 
