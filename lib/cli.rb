@@ -19,7 +19,7 @@ class Game
     def play
         start
         @name = get_name
-        #Display genres not in array format
+        #Display genres not in array format // puts All_genres.all << All genres are in objects here
         generate_puzzle
         score_menu_turn
     end

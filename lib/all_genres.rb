@@ -1,11 +1,16 @@
 require_relative '../config/environment.rb'
 
 class All_genres
+    attr_reader :name, :all
     
-    @@all_genres = []
+    @@all = []
 
+    def initialize(name)
+        @name = name
+        @@all << self
+    end
 
-    def self.all_genres
-        @@all_genres
+    def self.all
+        @@all
     end
 end
