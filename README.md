@@ -10,6 +10,9 @@ Add this line to your application's Gemfile:
 gem 'wheeloffortune'
 ```
 
+Imagemagick is required to run this CLI app
+`brew install imagemagick`
+
 And then execute:
 
     $ bundle install
