@@ -4,13 +4,23 @@ require_relative '../config/environment.rb'
 module Banners
 
         def title
-            Catpix::print_image "../wheeloffortune/images/banner.jpg",
-                :limit_x => 1.0,
-                :limit_y => 0,
-                :center_x => true,
-                :center_y => true,
-                :bg => "black",
-                :bg_fill => true
+            begin
+                Catpix::print_image "..images/banner.jpg",
+                    :limit_x => 1.0,
+                    :limit_y => 0,
+                    :center_x => true,
+                    :center_y => true,
+                    :bg => "black",
+                    :bg_fill => true
+            rescue
+                Catpix::print_image "../wheeloffortune/images/banner.jpg",
+                        :limit_x => 1.0,
+                        :limit_y => 0,
+                        :center_x => true,
+                        :center_y => true,
+                        :bg => "black",
+                        :bg_fill => true
+            end
         end
 
         def game_board_border
@@ -62,15 +72,15 @@ module Banners
         end
 
         def win_image
-            if Catpix::print_image "..images/win.jpg"
-            Catpix::print_image "..images/win.jpg",
-                :limit_x => 1.0,
-                :limit_y => 0,
-                :center_x => true,
-                :center_y => true,
-                :bg => "black",
-                :bg_fill => true
-            elsif Catpix::print_image "../wheeloffortune/images/win.jpg"
+            begin
+                Catpix::print_image "..images/win.jpg",
+                    :limit_x => 1.0,
+                    :limit_y => 0,
+                    :center_x => true,
+                    :center_y => true,
+                    :bg => "black",
+                    :bg_fill => true
+            rescue
                 Catpix::print_image "../wheeloffortune/images/win.jpg",
                     :limit_x => 1.0,
                     :limit_y => 0,
@@ -78,16 +88,26 @@ module Banners
                     :center_y => true,
                     :bg => "black",
                     :bg_fill => true
-            end
+            end 
         end
 
         def lose_image
-            Catpix::print_image "../wheeloffortune/images/lose.png",
-                :limit_x => 1.0,
-                :limit_y => 0,
-                :center_x => true,
-                :center_y => true,
-                :bg => "black",
-                :bg_fill => true
+            begin
+                Catpix::print_image "../images/lose.png",
+                    :limit_x => 1.0,
+                    :limit_y => 0,
+                    :center_x => true,
+                    :center_y => true,
+                    :bg => "black",
+                    :bg_fill => true
+            rescue
+                Catpix::print_image "../wheeloffortune/images/lose.png",
+                    :limit_x => 1.0,
+                    :limit_y => 0,
+                    :center_x => true,
+                    :center_y => true,
+                    :bg => "black",
+                    :bg_fill => true
+            end
         end
 end
