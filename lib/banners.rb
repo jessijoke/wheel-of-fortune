@@ -62,16 +62,16 @@ module Banners
         end
 
         def win_image
-            if Catpix::print_image "../wheeloffortune/images/win.jpg"
+            if Catpix::print_image "..images/win.jpg"
+            Catpix::print_image "..images/win.jpg",
+                :limit_x => 1.0,
+                :limit_y => 0,
+                :center_x => true,
+                :center_y => true,
+                :bg => "black",
+                :bg_fill => true
+            elsif Catpix::print_image "../wheeloffortune/images/win.jpg"
                 Catpix::print_image "../wheeloffortune/images/win.jpg",
-                    :limit_x => 1.0,
-                    :limit_y => 0,
-                    :center_x => true,
-                    :center_y => true,
-                    :bg => "black",
-                    :bg_fill => true
-            elsif Catpix::print_image "..images/win.jpg"
-                Catpix::print_image "..images/win.jpg",
                     :limit_x => 1.0,
                     :limit_y => 0,
                     :center_x => true,
