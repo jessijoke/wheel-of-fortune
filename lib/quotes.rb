@@ -3,17 +3,18 @@ require_relative '../config/environment.rb'
 class QuoteAPI
     def initialize(url="https://quote-garden.herokuapp.com/api/v2/genres")
         @URL = url 
-        get_quotes
+        get_categories
     end
 
-    def get_quotes
+    def get_categories
         uri = URI.parse(@URL)
         response = Net::HTTP.get_response(uri)
+
         response.body
     end
 
     def parse_json
-        info = get_quotes
+        info = get_categories
         JSON.parse(info)
     end
 end

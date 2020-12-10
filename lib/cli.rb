@@ -19,6 +19,7 @@ class Game
     def play
         start
         @name = get_name
+        #Display genres not in array format
         generate_puzzle
         score_menu_turn
     end
