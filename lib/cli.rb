@@ -14,12 +14,12 @@ class Game
         @newpuzzle = Newpuzzle.new
         @consonants = "[bcdfghjklmnpqrstvwxyz"
         @vowels = "aeiou]"
+        GenreAPI.new.parse_json_categories
     end
 
     def play
         start
         @name = get_name
-        #Display genres not in array format // puts All_genres.all << All genres are in objects here
         generate_puzzle
         score_menu_turn
     end
@@ -36,8 +36,10 @@ class Game
     end
 
     def generate_puzzle
-        @newpuzzle.choose_category(QuoteAPI.new("https://quote-garden.herokuapp.com/api/v2/genres"))
-        @quote = @newpuzzle.select_puzzle
+        genres = Genre.all.map { |genre| genre.name }.join(", ")
+        prompt = TTY::Prompt.new
+        category_chosen = prompt.ask("Which category would you like to play? (Select a category from the options)", default: genres)
+        @quote = @newpuzzle.select_puzzle(category_chosen)
         puzzle_board
     end
 
@@ -142,8 +144,9 @@ class Game
         input = prompt.ask("Would you like to play again? (y/n)")
         if input.strip.downcase == "yes" || input.strip.downcase == "y"
             @@score = 0
-            game = Game.new
-            game.play
+            @consonants = "[bcdfghjklmnpqrstvwxyz"
+            @vowels = "aeiou]"
+            play
         else
             exit
         end

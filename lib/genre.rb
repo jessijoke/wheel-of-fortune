@@ -1,6 +1,6 @@
 require_relative '../config/environment.rb'
 
-class All_genres
+class Genre
     attr_reader :name, :all
     
     @@all = []

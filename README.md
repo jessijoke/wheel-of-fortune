@@ -8,9 +8,9 @@ Welcome to Wheel of Fortune! This is a single player command line version of the
 
 Add this line to your application's Gemfile:
 
-```ruby
-gem 'wheeloffortune'
-```
+And then execute:
+
+    $ bundle install
 
 Imagemagick is required to run this CLI app
 ```
@@ -27,9 +27,21 @@ And then execute:
 
     $ bundle install
 
+<!--
+--------------------------------------------------
+Only applicable when this is uploaded to ruby gems
+--------------------------------------------------
+
+```ruby
+gem 'wheeloffortune'
+```
+
 Or install it yourself as:
 
     $ gem install wheeloffortune
+
+--------------------------------------------------
+-->
 
 ## Usage
 

@@ -1,22 +1,29 @@
 require_relative '../config/environment.rb'
 
-class QuoteAPI
+class GenreAPI
     def initialize(url="https://quote-garden.herokuapp.com/api/v2/genres")
         @URL = url 
-        get_categories
+        get_info
     end
 
-    def get_categories
+    def get_info
         uri = URI.parse(@URL)
         response = Net::HTTP.get_response(uri)
-
         response.body
     end
 
-    def parse_json
-        info = get_categories
-        JSON.parse(info)
+    def parse_json_categories
+        info = get_info
+        JSON.parse(info)["genres"].each { |genre| Genre.new(genre) }
     end
+
+    def parse_json_quote
+        info = get_info
+        JSON.parse(info)["quotes"].sample(1)
+        #binding.pry
+        #JSON.parse(info)["quotes"][rand(0..(info["quotes"].count - 1))]
+    end
+
 end
 
 
