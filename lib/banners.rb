@@ -24,7 +24,7 @@ module Banners
         end
 
         def game_board_border
-        puts "<o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o>".colorize(:red)
+        puts "<o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o><o>".colorize(:red)
         end
 
         def blank_link
