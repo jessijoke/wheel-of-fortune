@@ -58,30 +58,39 @@ class Game
 
     def puzzle_board
         puts display_top
-        puts display(@quote, @consonants, @vowels)
+        if puzzle_solved?
+            puts @quote
+        else
+            puts display(@quote, @consonants, @vowels)
+        end
         puts display_bottom
     end
 
     def spin_the_wheel
-        wheelvalue = wheel[0]
-        if wheelvalue != "Bankrupt"
-            puts "You spun $#{wheelvalue}"
-            letter = spin_the_wheel_turn(@consonants, @quote, "consonant") 
-            if @quote.include?(letter) 
-                multiplier = @quote.count(letter)
-                addvalue = wheelvalue*multiplier
-                @@score += addvalue
-                @consonants.tr!(letter, '')
-                update_board
-            else
-                @@score -= (wheelvalue)
-                @consonants.tr!(letter, '')
-                update_board
-            end
+        if @consonants == "["
+            puts "You have already chosen all the. Buy a vowel or solve the puzzle."
+            turn_select
         else
-            @@score = 0
-            puts "You spun $#{wheelvalue}"
-            score_menu_turn
+            wheelvalue = wheel[0]
+            if wheelvalue != "Bankrupt"
+                puts "You spun $#{wheelvalue}"
+                letter = spin_the_wheel_turn(@consonants, @quote, "consonant") 
+                if @quote.downcase.include?(letter) 
+                    multiplier = @quote.downcase.count(letter)
+                    addvalue = wheelvalue*multiplier
+                    @@score += addvalue
+                    @consonants.tr!(letter, '')
+                    update_board
+                else
+                    @@score -= (wheelvalue)
+                    @consonants.tr!(letter, '')
+                    update_board
+                end
+            else
+                @@score = 0
+                puts "You spun $#{wheelvalue}"
+                score_menu_turn
+            end
         end
     end
 
