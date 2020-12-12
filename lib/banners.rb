@@ -41,7 +41,7 @@ module Banners
 
         def menu_banner
             puts"
-            Choose an option:
+Choose an option:
 +-------------------------+------------------------+----------------------------+
 |   Spin the Wheel (s)    |    Buy a Vowel? (v)    |    Solve the Puzzle? (sv)  |
 +-------------------------+------------------------+----------------------------+
@@ -109,5 +109,15 @@ module Banners
                     :bg => "black",
                     :bg_fill => true
             end
+        end
+
+        def end_banner(end_message)
+            blank_link
+            game_board_border
+            blank_link
+            puts end_message
+            blank_link
+            game_board_border
+            blank_link
         end
 end

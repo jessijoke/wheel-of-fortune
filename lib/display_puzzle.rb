@@ -3,7 +3,7 @@ require 'pry'
 
 module Display_Puzzle
     def display(quote, arr1, arr2)
-        quote.gsub(/#{arr1}#{arr2}/i, '-')
+        quote.gsub(/#{arr1}"&"#{arr2}/i, '-')
     end
 end
 

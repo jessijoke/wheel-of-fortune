@@ -36,21 +36,29 @@ class Game
     end
 
     def generate_puzzle
-        genres = Genre.all.map { |genre| genre.name }.join(", ")
+        #genres = Genre.all.map { |genre| genre.name }.join(", ")
+        genres = Genre.all.map { |genre| genre.name }
         prompt = TTY::Prompt.new
-        category_chosen = prompt.ask("Which category would you like to play? (Select a category from the options)", default: genres)
+
+        category_chosen = prompt.select("Which category would you like to play? (Use the the left and right arrow keys to view more categories)", genres, per_page: 7, cycle: true, default: 1)
         @quote = @newpuzzle.select_puzzle(category_chosen)
         puzzle_board
     end
 
     def turn_select
-        input = gets.strip.downcase
+        input = gets
+        if !input
+            input = gets until !input
+        end
+        input = input.strip.downcase
         if input == "s" || input == "spin" || input == "spin the wheel"
             spin_the_wheel
         elsif input == "v" || input == "vowel" || input == "buy a vowel"
             buy_a_vowel
         elsif input == "sv" || input == "solve" || input == "solve the puzzle"
             solve_the_puzzle
+        elsif input == @quote.strip.downcase
+            end_game
         else
             turn_select
         end
@@ -144,10 +152,10 @@ class Game
     def end_game
         if @@score > 0
             win_image
-            puts "Congratulations #{@name} You Won! Your final score is $#{@@score}"
+            end_banner("Congratulations #{@name} You Won! Your final score is $#{@@score}")
         else
             lose_image
-            puts "Well #{@name}, you solved the puzzle but I wouldn't exactly call this a win. Your final score is -$#{@@score}"
+            end_banner("Well #{@name}, you solved the puzzle but I wouldn't exactly call this a win. Your final score is -$#{@@score}")
         end
         prompt = TTY::Prompt.new
         input = prompt.ask("Would you like to play again? (y/n)")
