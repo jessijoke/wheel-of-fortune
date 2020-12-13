@@ -1,11 +1,10 @@
 require_relative '../config/environment.rb'
 
-
 class Newpuzzle
     attr_accessor  :all_genres
 
-    def select_puzzle(category_chosen)
-        puzzle = GenreAPI.new("https://quote-garden.herokuapp.com/api/v2/genres/" + category_chosen + "?page=1&limit=1000").parse_json_quote
+    def select_puzzle(category_chosen) 
+        puzzle = GenreAPI.new("https://quote-garden.herokuapp.com/api/v3/quotes/?" + category_chosen + "&page=1&limit=1000").parse_json_quote
         final_choice = puzzle[0]["quoteText"]
     end
 end
