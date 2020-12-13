@@ -96,7 +96,7 @@ class Game
                 end
             else
                 @@score = 0
-                puts "You spun $#{wheelvalue}"
+                puts "You spun #{wheelvalue} ¯\_(ツ)_/¯"
                 score_menu_turn
             end
         end

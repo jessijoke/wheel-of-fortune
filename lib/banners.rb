@@ -11,7 +11,7 @@ module Banners
                     :center_x => true,
                     :center_y => true,
                     :bg => "black",
-                    :bg_fill => true
+                    :bg_fill => false
             rescue
                 Catpix::print_image "../wheeloffortune/images/banner.jpg",
                         :limit_x => 1.0,
@@ -19,7 +19,7 @@ module Banners
                         :center_x => true,
                         :center_y => true,
                         :bg => "black",
-                        :bg_fill => true
+                        :bg_fill => false
             end
         end
 
@@ -79,7 +79,7 @@ Choose an option:
                     :center_x => true,
                     :center_y => true,
                     :bg => "black",
-                    :bg_fill => true
+                    :bg_fill => false
             rescue
                 Catpix::print_image "../wheeloffortune/images/win.jpg",
                     :limit_x => 1.0,
@@ -87,7 +87,7 @@ Choose an option:
                     :center_x => true,
                     :center_y => true,
                     :bg => "black",
-                    :bg_fill => true
+                    :bg_fill => false
             end 
         end
 
@@ -99,7 +99,7 @@ Choose an option:
                     :center_x => true,
                     :center_y => true,
                     :bg => "black",
-                    :bg_fill => true
+                    :bg_fill => false
             rescue
                 Catpix::print_image "../wheeloffortune/images/lose.png",
                     :limit_x => 1.0,
@@ -107,7 +107,7 @@ Choose an option:
                     :center_x => true,
                     :center_y => true,
                     :bg => "black",
-                    :bg_fill => true
+                    :bg_fill => false
             end
         end
 
