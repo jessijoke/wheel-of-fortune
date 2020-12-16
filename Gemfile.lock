@@ -69,12 +69,15 @@ PLATFORMS
 DEPENDENCIES
   catpix
   colorize
+  docopt (~> 0.6.1)
   pastel
   pry
   rake (~> 12.0)
   require_all
   rmagick (~> 2.15.2)
   rspec (~> 3.0)
+  ruby-terminfo (~> 0.1.1)
+  tco (~> 0.1.8)
   tty
   tty-prompt
   tty-reader
