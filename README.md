@@ -8,11 +8,15 @@ Welcome to Wheel of Fortune! This is a single player command line version of the
 
 Add this line to your application's Gemfile:
 
-And then execute:
-
-    $ bundle install
-
 Imagemagick is required to run this CLI app
+
+Follow the instructions here
+https://imagemagick.org/script/download.php
+
+-----------------------------------------------
+OR
+-----------------------------------------------
+
 ```
 brew install imagemagick
 ```
@@ -22,6 +26,9 @@ To correct a dependency glitch in the Catpix & Rmagick gems, you'll also need to
 brew unlink imagemagick
 brew install imagemagick@6 && brew link imagemagick@6 --force
 ```
+
+-----------------------------------------------
+
 
 And then execute:
 
