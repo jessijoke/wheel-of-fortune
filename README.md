@@ -19,6 +19,8 @@ https://imagemagick.org/script/download.php
 OR
 -----------------------------------------------
 
+If you are having difficulty installing imagemagick on mac, we this fix and found it successful.
+
 ```
 brew install imagemagick
 ```
